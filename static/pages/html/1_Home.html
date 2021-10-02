@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-toolbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="nav-brand"><img class="brand" src="../img/brand.svg" alt=""></a>
+                <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;top: 4px;width: 85px;">
+                    <a href="#" class="nav-link" onclick="clickDropdownVersion()" style="color: #fff;">Set 5.5</a>
+                    <div class="btn-dropdown-content"  id="version">
+                        <ul class="nav-links-sub">
+                            <li class="nav-item"><a href="#" class="nav-link">Set 5.5</a></li> 
+                        </ul>
+                   </div>
+                </div>
+                <div class="searchbar player-search" id="add-border">
+                    <div class="btn-dropdown click-dropdown">
+                        <a href="#" class="nav-link" onclick="clickDropdownServer()" style="color: #fff;">NA</a>
+                        <div class="btn-dropdown-content" id="server">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">NA</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">JP</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">KR</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">EU</a></li> 
+                            </ul>
+                       </div>
+                    </div>
+                    <input type="text" class="searchbar-input" placeholder="Search Summoner Name..." onfocusout="myUnFocus(this)" onfocus="myFocus(this)">
+                    <a href="#"><img src="../img/search-icon.svg" alt="search icon" class="searchbar-icon"></a>
+                </div>
+                <a href="#" class="cta-btn">
+                    <div class="btn">Download App</div>
+                </a>
+            </div>
+        </div>
+    </div>
+        <div class="nav" style="background-color: #102531;"> 
+            <div class="container">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="#" class="nav-link">Team Comps</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Meta Report</a></li>
+                    <li class="nav-item dropdown"><a href="Champions.html" class="nav-link">Champions</a>
+                        <div class="dropdown-content">
+                             <ul class="nav-links-sub">
+                                 <li class="nav-item"><a href="#" class="nav-link">Champions</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Origins</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Items</a></li>
+                             </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Tier Lists</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Item Builder</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Team Builder</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link">Database</a>
+                        <div class="dropdown-content">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="/Champions.html" class="nav-link">Champions</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Champion Stats</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Origins</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Rolling</a></li>
+                            </ul>
+                       </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Patch Notes</a></li>
+                </ul> 
+            </div>
+        </div>
+        <!-- home -->
+    <section class="home">
+        <div class="row">
+            <div class="container">
+                <div class="home-header">
+                    <h1>Your Companion for Teamfight Tactics</h1>
+                    <h2>Become the Next Little Legend</h2>
+                    <p style="text-align: center;">Play smarter and climb the ranks in TFT with constantly updated item guides, team recommendations, and deep champion stat analysis. Now available in-game!</p>
+                    <div class="cta">
+                        <a href="#" class="btn">download the app</a>
+                    </div>
+                </div>
+                <a href="#" class="partners-banner">
+                    <div class="update-title" style="text-align: center;">
+                        Are You a Content Creator or Streamer?
+                    </div>
+                    <div class="update-subtitle">Join Our Partners Program!</div>
+                </a>
+                <div class="home-app">
+                    <div class="row">
+                        <div class="col app-image left">
+                            <img src="../img/coach-full.jpg" alt="items-full" class="image-full">
+                            <img src="../img/coach-crop.jpg" alt="items-crop" class="image-crop">
+                        </div>
+                        <div class="col app-info right">
+                            <h2>Persional Coach</h2>
+                            <p>Get in-depth analysis after every match to see what you did right and which areas to improve on.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col app-info left">
+                            <h2>Match History</h2>
+                            <p>Review your past matches, standings, and tendencies. Find out what works for you!</p>
+                        </div>
+                        <div class="col app-image right">
+                            <img src="../img/teams-full.jpg" alt="items-full" class="image-full">
+                            <img src="../img/teams-crop.jpg" alt="items-crop" class="image-crop">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col app-image left">
+                            <img src="../img/past-full.jpg" alt="items-full" class="image-full">
+                            <img src="../img/champs-crop.jpg" alt="items-crop" class="image-crop">
+                        </div>
+                        <div class="col app-info right">
+                            <h2>Match History</h2>
+                            <p>Review your past matches, standings, and tendencies. Find out what works for you!</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col app-info left">
+                            <h2>Riot Games Compliant</h2>
+                            <p>TFTactics is in sync with Riot’s terms of service and will not result in players getting banned or otherwise sanctioned.</p>
+                            <div class="divider"></div>
+                            <a href="#">How Overwolf Keeps Users Safe from Bans</a>
+                            <a href="#">Riot's Stance on Third Party Apps</a>
+                        </div>
+                        <div class="col app-image right">
+                            <img src="../img/Ezreal.png" alt="items-full" class="image-full ezreal"> 
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        <!-- features app -->
+        <div style="background-color: #102531;">
+                <div class="container">
+                    <div class="home-app features">
+                        <div class="row">
+                        <div class="features-title"><h2>Additional Features</h2></div>
+                        </div>
+                        <div class="row-features"> 
+                        <div class="app-features"><h4>Board Tracker</h4>
+                            <div class="divider-features"></div>
+                            <p>Easily keep track of your own board as the game evolves and pin a final team composition.</p>
+                        </div>
+                        <div class="app-features"><h4>Champion Stats</h4>
+                            <div class="divider-features"></div>
+                            <p>Easily keep track of your own board as the game evolves and pin a final team composition.</p>
+                        </div>
+                        <div class="app-features"><h4>Round Tracker</h4>
+                            <div class="divider-features"></div>
+                            <p>Easily keep track of your own board as the game evolves and pin a final team composition.</p>
+                        </div>
+                        <div class="app-features"><h4>Patch Notes</h4>
+                            <div class="divider-features"></div>
+                            <p>Easily keep track of your own board as the game evolves and pin a final team composition.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>  
+            </div>
+            <!--  -->
+                <div class="container">
+                    <div class="home-app features">
+                        <div class="row">
+                        <div class="features-title"><h2>Using TFTactics in 3 Steps</h2></div>
+                        </div>
+                        <div class="row-features"> 
+                        <div class="tutorial">
+                            <img src="../img/dl-icon.png" alt="">
+                            <h4>Download TFTactics</h4> 
+                            <p>You can get it securely for free using the button below</p>
+                        </div>
+                        <div class="tutorial">
+                            <img src="../img/Install.png" alt="">
+                            <h4>Install the App</h4> 
+                            <p>A short installation will enable TFTactics on your machine</p>
+                        </div>
+                        <div class="tutorial">
+                            <img src="../img/tft.svg" alt="">
+                            <h4>Start Your Match</h4> 
+                            <p>TFTactics automatically launches when your match starts</p>
+                        </div> 
+                    </div>
+                    <div class="btn-down">
+                        <a href="#" class="btn">download the app</a>
+                    </div>
+                    </div>
+                </div> 
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Partners Program</a>
+                    <div class="cookies"><a href="#">Manage Cookie Settings</a></div>
+                    <div>
+                        <a href="#">Set Skins</a> 
+                        <div class="switch active"> 
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                              </label>
+                        </div>
+                    </div> 
+                    <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;top: 4px;width: 85px;">
+                        <a href="#" class="nav-link" onclick="clickDropdownLang()" style="color: #fff;">EN</a>
+                        <div class="btn-dropdown-content"  id="lang">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">EN</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">VI</a></li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="footer-about">
+                    TFTACTICS.GG isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+                </p>
+                <p class="footer-copyright">© TFTactics 2021</p>
+            </div>
+        </footer>
+
+        <script>  
+            function myFocus(x){  
+               var element= document.getElementById('add-border')
+               element.classList.add('add-border')
+            }
+            function myUnFocus(x){  
+               var element= document.getElementById('add-border')
+               element.classList.remove('add-border')
+            }
+
+            function clickDropdownVersion(x){ 
+                    var element=document.getElementById('version')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+
+            function clickDropdownServer(x){ 
+                    var element=document.getElementById('server')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+
+            function clickDropdownLang(x){ 
+                    var element=document.getElementById('lang')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+
+             
+        </script>
+</body>
+</html>

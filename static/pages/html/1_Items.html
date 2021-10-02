@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="nav-toolbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="nav-brand"><img class="brand" src="../img/brand.svg" alt=""></a>
+                <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;top: 4px;width: 85px;">
+                    <a href="#" class="nav-link" onclick="clickDropdownVersion()" style="color: #fff;">Set 5.5</a>
+                    <div class="btn-dropdown-content"  id="version">
+                        <ul class="nav-links-sub">
+                            <li class="nav-item"><a href="#" class="nav-link">Set 5.5</a></li> 
+                        </ul>
+                   </div>
+                </div>
+                <div class="searchbar player-search" id="add-border">
+                    <div class="btn-dropdown click-dropdown">
+                        <a href="#" class="nav-link" onclick="clickDropdownServer()" style="color: #fff;">NA</a>
+                        <div class="btn-dropdown-content" id="server">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">NA</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">JP</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">KR</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">EU</a></li> 
+                            </ul>
+                       </div>
+                    </div>
+                    <input type="text" class="searchbar-input" placeholder="Search Summoner Name..." onfocusout="myUnFocus(this)" onfocus="myFocus(this)">
+                    <a href="#"><img src="../img/search-icon.svg" alt="search icon" class="searchbar-icon"></a>
+                </div>
+                <a href="#" class="cta-btn">
+                    <div class="btn">Download App</div>
+                </a>
+            </div>
+        </div>
+    </div>
+        <div class="nav" style="background-color: #102531;"> 
+            <div class="container">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="#" class="nav-link">Team Comps</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Meta Report</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link">Champions</a>
+                        <div class="dropdown-content">
+                             <ul class="nav-links-sub">
+                                 <li class="nav-item"><a href="#" class="nav-link">Champions</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Origins</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+                                 <li class="nav-item"><a href="#" class="nav-link">Items</a></li>
+                             </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Tier Lists</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Item Builder</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Team Builder</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link">Database</a>
+                        <div class="dropdown-content">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">Champions</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Champion Stats</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Origins</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Classes</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Rolling</a></li>
+                            </ul>
+                       </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Patch Notes</a></li>
+                </ul> 
+            </div>
+        </div>
+        <!-- Champion -->
+    <section class="container">
+        <div class="row">
+            <div class="col-3 block-left">
+
+                <div class="filter-header" style="display: flex;justify-content: space-between;">
+                    <h2 style="color: white;">Lists</h2> 
+                </div>
+                <div class="divider"></div>
+                <ul>
+                    <li class="filter-title list-filter">Champions</li>
+                    <li class="filter-title list-filter">Origins</li> 
+                    <li class="filter-title list-filter">Classes</li> 
+                    <li class="filter-title list-filter">Items</li> 
+                </ul>
+
+                <div class="filter-header" style="display: flex;justify-content: space-between;">
+                    <h2 style="color: white;">Filters</h2>
+                    <div class="btn-dark" style="width: 60px;cursor: pointer;">Reset</div>
+                </div>
+                <div class="divider"></div>
+                <ul>
+                    <li class="filter-title" onclick="myFuncCost()">Cost<i class="fas fa-chevron-down" id="arrow-cost" style="font-size: 20px;color: white;float: right;"></i></li>
+                    <div class="sub-filter" id="sub-cost">
+                        <ul>
+                            <li class="filter-item"><img src="../img/icon-gold.svg" alt="icon-gold" class="filter-icon">1<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/icon-gold.svg" alt="icon-gold" class="filter-icon">2<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/icon-gold.svg" alt="icon-gold" class="filter-icon">3<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/icon-gold.svg" alt="icon-gold" class="filter-icon">4<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/icon-gold.svg" alt="icon-gold" class="filter-icon">5<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                        </ul>
+                    </div>
+                    <li class="filter-title" onclick="myFuncOrigin()">Origin<i class="fas fa-chevron-down" id="arrow-origin" style="font-size: 20px;color: white;float: right;"></i></li>
+                    <div class="sub-filter" id="sub-origin">
+                        <ul>
+                            <li class="filter-item"><img src="../img/origin/abomination.png" alt="icon-gold" class="filter-icon">Abomination<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/dawnbringer.png" alt="icon-gold" class="filter-icon">Dawnbringer<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/draconic.png" alt="icon-gold" class="filter-icon">Draconic<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/forgotten.png" alt="icon-gold" class="filter-icon">Forgotten<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/hellion.png" alt="icon-gold" class="filter-icon">Hellion<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/inanimate.png" alt="icon-gold" class="filter-icon">Inanimate<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/ironclad.png" alt="icon-gold" class="filter-icon">Ironclad<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/nightbringer.png" alt="icon-gold" class="filter-icon">Nightbringer<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/redeemed.png" alt="icon-gold" class="filter-icon">Redeemed<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/origin/revenant.png" alt="icon-gold" class="filter-icon">Revenant<i class="far fa-circle" style="float: right;font-size:small;"></i></li> 
+                            <li class="filter-item"><img src="../img/origin/sentinel.png" alt="icon-gold" class="filter-icon">Setinel<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                        </ul>
+                    </div>
+                    <li class="filter-title" onclick="myFuncClass()">Class<i class="fas fa-chevron-down" id="arrow-class" style="font-size: 20px;color: white;float: right;"></i></li>
+                    <div class="sub-filter" id="sub-class">
+                        <ul>
+                            <li class="filter-item"><img src="../img/class/assassin.png" alt="icon-gold" class="filter-icon">Assassin<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/brawler.png" alt="icon-gold" class="filter-icon">Brawler<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/cannoneer.png" alt="icon-gold" class="filter-icon">Cannoneer<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/caretaker.png" alt="icon-gold" class="filter-icon">Caretaker<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/cavalier.png" alt="icon-gold" class="filter-icon">Cavalier<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/cruel.png" alt="icon-gold" class="filter-icon">Cruel<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/invoker.png" alt="icon-gold" class="filter-icon">Invoker<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/knight.png" alt="icon-gold" class="filter-icon">Knight<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/legionnaire.png" alt="icon-gold" class="filter-icon">Legionnaire<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/mystic.png" alt="icon-gold" class="filter-icon">Mystic<i class="far fa-circle" style="float: right;font-size:small;"></i></li> 
+                            <li class="filter-item"><img src="../img/class/ranger.png" alt="icon-gold" class="filter-icon">Ranger<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/renewer.png" alt="icon-gold" class="filter-icon">Renewer<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/skirmisher.png" alt="icon-gold" class="filter-icon">Skirmisher<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/spellweaver.png" alt="icon-gold" class="filter-icon">Spellweaver<i class="far fa-circle" style="float: right;font-size:small;"></i></li>
+                            <li class="filter-item"><img src="../img/class/victorious.png" alt="icon-gold" class="filter-icon">Victorious<i class="far fa-circle" style="float: right;font-size:small;"></i></li>  
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-12 block-right">
+                <div class="filter-header" style="display: flex;justify-content: space-between;">
+                    <div style="display: flex;">
+                        <h2 style="color: white;">TFT Champions List</h2> 
+                        <div class="btn-dropdown click-dropdown" onclick="clickDropdownVersion()" style="border-radius: 4px;height: 20px;width: 85px;margin-left: 20px;">
+                            <div href="#"  class="nav-link" style="color: #fff;cursor: pointer;">Set 5.5</div>
+                            <div class="btn-dropdown-content"  id="version">
+                                <ul class="nav-links-sub">
+                                    <li class="nav-item"><a href="#" class="nav-link">Set 5.5</a></li> 
+                                </ul>
+                           </div>
+                        </div>
+                    </div> 
+                    <input type="text" class="search-input" placeholder="Search Summoner Name..." >
+                </div>
+                <div class="divider"></div>
+                <ul class="filter-list"></ul>
+                <div class="update">
+                    <div class="update-patch">
+                        <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;width: 120px;margin-left: 20px;">
+                        <div href="#"  class="nav-link" style="color: #fff;">Patch 11.19</div> 
+                        </div>
+                    </div>
+                    <div class="legend"><div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;width: 120px;margin-left: 20px;">
+                        <div href="#"  class="nav-link" style="color: #fff; text-align: center;"><i class="fas fa-sort-up" style="color: #bfff7f;"></i>Tier Up</div> 
+                        </div>
+                        <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;width: 120px;margin-left: 20px;">
+                            <div href="#"  class="nav-link" style="color: #fff; text-align: center;"><i class="fas fa-sort-down" style="color: #ff7f7f;"></i>Tier Down</div> 
+                            </div>
+                    </div>     
+                </div>
+                <div class="tier-group">
+                    <div class="character-category" style="background: #ff7f7f;">
+                        <h3>S</h3>
+                    </div>
+                    <div class="characters-list" style="justify-content: left;">
+                        <a href="#" class="characters-item">
+                            <div class="character-wrapper">
+                                <img src="../img/Items/BFSword.png" alt="#" class="character-icon">
+                            </div> 
+                        </a>
+                        <a href="#" class="characters-item">
+                            <div class="character-wrapper">
+                                <img src="../img/Items/RecurveBow.png" alt="#" class="character-icon">
+                            </div> 
+                        </a>
+                        <a href="#" class="characters-item">
+                            <div class="character-wrapper">
+                                <img src="../img/Items/Spatula.png" alt="#" class="character-icon">
+                            </div> 
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="tier-group">
+                    <div class="character-category" style="background: #ffbf7f;">
+                        <h3>A</h3>
+                    </div>
+                    <div class="characters-list" style="justify-content: left;">
+                         
+                    </div>
+                </div>
+
+                <div class="tier-group">
+                    <div class="character-category" style="background: #ffdf7f;">
+                        <h3>B</h3>
+                    </div>
+                    <div class="characters-list" style="justify-content: left;">
+                        
+                    </div>
+                </div>
+
+                <div class="tier-group">
+                    <div class="character-category" style="background: #ffff7f;">
+                        <h3>C</h3>
+                    </div>
+                    <div class="characters-list" style="justify-content: left;">
+                        
+                    </div>
+                </div>
+
+                <div class="tier-group">
+                    <div class="character-category" style="background:#bfff7f">
+                        <h3>D</h3>
+                    </div>
+                    <div class="characters-list" style="justify-content: left;">
+                         
+                    </div>
+                </div>
+
+                
+                
+ 
+                 
+            </div>
+        </div>
+    </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Partners Program</a>
+                    <div class="cookies"><a href="#">Manage Cookie Settings</a></div>
+                    <div>
+                        <a href="#">Set Skins</a> 
+                        <div class="switch active"> 
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                              </label>
+                        </div>
+                    </div> 
+                    <div class="btn-dropdown click-dropdown" style="border-radius: 4px;height: 20px;top: 4px;width: 85px;">
+                        <a href="#" class="nav-link" onclick="clickDropdownLang()" style="color: #fff;">EN</a>
+                        <div class="btn-dropdown-content"  id="lang">
+                            <ul class="nav-links-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">EN</a></li> 
+                                <li class="nav-item"><a href="#" class="nav-link">VI</a></li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="footer-about">
+                    TFTACTICS.GG isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+                </p>
+                <p class="footer-copyright">© TFTactics 2021</p>
+            </div>
+        </footer>
+
+        <script>
+            // page Champion
+            // fa-chevron-down
+            function myFuncCost() {
+                var element = document.getElementById('sub-cost');
+                    element.classList.toggle("open");  
+                    var arrow=document.getElementById('arrow-cost');
+                    arrow.classList.toggle('arrow-up');
+                }
+
+            function myFuncOrigin() {
+                var element = document.getElementById('sub-origin');
+                    element.classList.toggle("open"); 
+                    var arrow=document.getElementById('arrow-origin');
+                    arrow.classList.toggle('arrow-up');
+                }
+
+            function myFuncClass() {
+                var element = document.getElementById('sub-class');
+                    element.classList.toggle("open"); 
+                    var arrow=document.getElementById('arrow-class');
+                    arrow.classList.toggle('arrow-up');
+                }
+
+            // page Tier List
+            // document.querySelector('.list-filter').addEventListener('click', function(e) {    
+                
+            //     var selected;
+                
+            //     if(e.target.tagName === 'LI') {   
+            //         console.log(e.target)                                    
+            //         // selected= document.querySelector('li.selected');                    
+            //         // if(selected) selected.className= '';                               
+            //         // e.target.className= 'selected';                                     
+            //     }
+
+            // });
+
+
+///////////////////////////////////////////////////////////////////
+            function myFocus(x){  
+               var element= document.getElementById('add-border')
+               element.classList.add('add-border')
+            }
+            function myUnFocus(x){  
+               var element= document.getElementById('add-border')
+               element.classList.remove('add-border')
+            }
+
+            function clickDropdownVersion(x){ 
+                    var element=document.getElementById('version')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+
+            function clickDropdownServer(x){ 
+                    var element=document.getElementById('server')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+
+            function clickDropdownLang(x){ 
+                    var element=document.getElementById('lang')
+                    element.classList.toggle('btn-dropdown-content-click')  
+            }
+ 
+        </script>
+</body>
+</html>
