@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="/db/webbootstrap.css"> -->
+    <link rel="stylesheet" href="/static/pages/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="App">
+            <nav class="nav toolbar">
+                <div class="nav-wrapper container"><a class="nav-brand active" aria-current="page" href="/"><img
+                            class="brand" src="https://rerollcdn.com/brand.svg" alt="TFTactics"></a>
+                    <div class="set-btn dropdown"><button type="button" aria-haspopup="true" aria-expanded="false"
+                            class="dropdown-toggle btn btn-secondary">Set 5.5</button>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button"
+                                set="5.5" tabindex="0" role="menuitem" class=" active dropdown-item">Set 5.5</button>
+                        </div>
+                    </div>
+                    <div class="searchbar player-search">
+                        <div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false"
+                                class="dropdown-toggle btn btn-secondary">NA</button>
+                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button
+                                    type="button"
+                                    region="{&quot;name&quot;:&quot;BR&quot;,&quot;code&quot;:&quot;br1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">BR</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;EUNE&quot;,&quot;code&quot;:&quot;eun1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">EUNE</button><button
+                                    type="button"
+                                    region="{&quot;name&quot;:&quot;EUW&quot;,&quot;code&quot;:&quot;euw1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">EUW</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;JP&quot;,&quot;code&quot;:&quot;jp1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">JP</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;KR&quot;,&quot;code&quot;:&quot;kr&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">KR</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;LAN&quot;,&quot;code&quot;:&quot;la1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">LAN</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;LAS&quot;,&quot;code&quot;:&quot;la2&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">LAS</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;NA&quot;,&quot;code&quot;:&quot;na1&quot;}"
+                                    tabindex="0" role="menuitem" class=" active dropdown-item">NA</button><button
+                                    type="button"
+                                    region="{&quot;name&quot;:&quot;OCE&quot;,&quot;code&quot;:&quot;oc1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">OCE</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;TR&quot;,&quot;code&quot;:&quot;tr1&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">TR</button><button type="button"
+                                    region="{&quot;name&quot;:&quot;RU&quot;,&quot;code&quot;:&quot;ru&quot;}"
+                                    tabindex="0" role="menuitem" class="dropdown-item">RU</button></div>
+                        </div><input class="searchbar-input" type="text" placeholder="Search Summoner Name..."
+                            value=""><img class="searchbar-icon" src="https://rerollcdn.com/search-icon.svg"
+                            alt="search icon">
+                    </div><a class="cta-btn d-none d-xl-flex"
+                        href="https://download.overwolf.com/install/Download?&amp;PartnerId=3792&amp;ExtensionId=delfmdadipjjmpajblkalfkbebcbldbknecigjpc">
+                        <div class="btn">Download App</div>
+                    </a>
+                    <div class="hamburger ml-auto d-xl-none">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu d-xl-none">
+                    <h2>Navigation</h2>
+                    <ul class="mobile-links">
+                        <li class="mobile-item"><a class="mobile-link" href="/tierlist/team-comps">Team Comps</a></li>
+                        <li class="mobile-item"><a class="nav-link" href="/meta-report">Meta Report</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/champions">Champions</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/tierlist">Tier List</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/item-builder">Item Builder</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/team-builder">Team Builder</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/db">Database</a></li>
+                        <li class="mobile-item"><a class="mobile-link" href="/patch-notes">Patch Notes</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="nav d-none d-xl-flex">
+                <div class="nav-wrapper container">
+                    <ul class="nav-links" style="width: 100%;">
+                        <li class="nav-item"><a class="nav-link" href="/tierlist/team-comps">Team Comps</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/meta-report">Meta Report</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/champions">Champions</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                href="/tierlist">Tier Lists</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="nav-link"
+                                    href="/tierlist/champions">Champions</a><a class="nav-link"
+                                    href="/tierlist/origins">Origins</a><a class="nav-link"
+                                    href="/tierlist/classes">Classes</a><a class="nav-link"
+                                    href="/tierlist/items">Items</a></div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/item-builder">Item Builder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/team-builder">Team Builder</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                href="/db">Database</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="nav-link"
+                                    href="/db/champions">Champions</a><a class="nav-link"
+                                    href="/db/champion-stats">Champion Stats</a><a class="nav-link"
+                                    href="/db/origins">Origins</a><a class="nav-link" href="/db/classes">Classes</a><a
+                                    class="nav-link" href="/db/rolling">Rolling</a></div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/patch-notes">Patch Notes</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="home container-fluid">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-12 home-header">
+                            <h1>Your Companion for Teamfight Tactics</h1>
+                            <h2>Become the Next Little Legend</h2>
+                            <p>Play smarter and climb the ranks in TFT with constantly updated item guides, team
+                                recommendations, and deep champion stat analysis. Now available in-game!</p>
+                            <div class="cta"><a class="cta-btn"
+                                    href="https://download.overwolf.com/install/Download?Name=TFTactics&amp;ExtensionId=delfmdadipjjmpajblkalfkbebcbldbknecigjpc&amp;Channel=website3">
+                                    <div class="btn">Download the App</div>
+                                </a></div>
+                        </div><a class="partners-banner" href="/partners">
+                            <div class="update-title" style="text-align: center;">Are You a Content Creator or Streamer?
+                            </div>
+                            <div class="update-subtitle">Join Our Partners Program!</div>
+                        </a>
+                        <div class="col-12 home-app">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 app-image left"><img class="image-full"
+                                        src="https://rerollcdn.com/home/coach-full.jpg" alt="items-full"><img
+                                        class="image-crop" src="https://rerollcdn.com/home/coach-crop.jpg"
+                                        alt="items-crop"></div>
+                                <div class="col-12 col-lg-6 app-info right">
+                                    <h2>Personal Coach</h2>
+                                    <p>Get in-depth analysis after every match to see what you did right and which areas
+                                        to improve on.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 home-app">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 app-info left">
+                                    <h2>Team Comps</h2>
+                                    <p>Build stronger teams by planning out your comp or choosing one of our hand-picked
+                                        ones that excel in the current meta.</p>
+                                </div>
+                                <div class="col-12 col-lg-6 app-image right"><img class="image-full"
+                                        src="https://rerollcdn.com/home/teams-full.jpg" alt="comps-full"><img
+                                        class="image-crop" src="https://rerollcdn.com/home/teams-crop.jpg"
+                                        alt="comps-crop"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 home-app">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 app-image left"><img class="image-full"
+                                        src="https://rerollcdn.com/home/past-full.jpg" alt="champs-full"><img
+                                        class="image-crop" src="https://rerollcdn.com/home/champs-crop.jpg"
+                                        alt="champs-crop"></div>
+                                <div class="col-12 col-lg-6 app-info right">
+                                    <h2>Match History</h2>
+                                    <p>Review your past matches, standings, and tendencies. Find out what works for you!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 home-app alt">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 app-info">
+                                    <h2>Riot Games Compliant</h2>
+                                    <p>TFTactics is in sync with Riot’s terms of service and will not result in players
+                                        getting banned or otherwise sanctioned.</p>
+                                    <div class="divider"></div><a
+                                        href="https://medium.com/overwolf-developers/how-overwolf-keeps-users-safe-from-bans-10f6a4657869"
+                                        target="_blank" rel="noopener noreferrer">How Overwolf Keeps Users Safe from
+                                        Bans<img src="https://rerollcdn.com/home/arrow-link.svg" alt="arrow-link"></a><a
+                                        href="https://support-leagueoflegends.riotgames.com/hc/en-us/articles/225266848"
+                                        target="_blank" rel="noopener noreferrer">Riot's Stance on Third Party Apps<img
+                                            src="https://rerollcdn.com/home/arrow-link.svg" alt="arrow-link"></a>
+                                </div>
+                                <div class="d-none d-lg-block col-6 app-image right"><img class="ezreal"
+                                        src="https://rerollcdn.com/home/Ezreal.png" alt="Riot Ezreal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row dark">
+                    <div class="container">
+                        <div class="col-12 home-app features">
+                            <div class="row">
+                                <div class="col-12 features-title">
+                                    <h2>Additional Features</h2>
+                                </div>
+                                <div class="col-12 col-lg app-features">
+                                    <h4>Board Tracker</h4>
+                                    <div class="divider"></div>
+                                    <p>Easily keep track of your own board as the game evolves and pin a final team
+                                        composition.</p>
+                                </div>
+                                <div class="col-12 col-lg app-features">
+                                    <h4>Champion Stats</h4>
+                                    <div class="divider"></div>
+                                    <p>Full stats for every level including damage, abilities, range, and other key
+                                        statistics.</p>
+                                </div>
+                                <div class="col-12 col-lg app-features">
+                                    <h4>Round Tracker</h4>
+                                    <div class="divider"></div>
+                                    <p>Check your win/loss ratio and performance against specific opponents every match.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg app-features">
+                                    <h4>Patch Notes</h4>
+                                    <div class="divider"></div>
+                                    <p>Stay up to date with the ever changing meta with fully detailed patch notes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="col-12 home-app tutorial">
+                            <div class="row">
+                                <div class="col-12 tutorial-title">
+                                    <h2>Using TFTactics in 3 Steps</h2>
+                                </div>
+                                <div class="col-12 col-lg-4 app-tutorial">
+                                    <div class="col-6 tutorial-image"><img class="dl-icon"
+                                            src="https://rerollcdn.com/home/dl-icon.png" alt="Download Icon"></div>
+                                    <h4>Download TFTactics</h4>
+                                    <p>You can get it securely for free using the button below</p>
+                                </div>
+                                <div class="col-12 col-lg-4 app-tutorial">
+                                    <div class="col-6 tutorial-image"><img class="Install"
+                                            src="https://rerollcdn.com/home/Install.png" alt="Install"></div>
+                                    <h4>Install the App</h4>
+                                    <p>A short installation will enable TFTactics on your machine</p>
+                                </div>
+                                <div class="col-12 col-lg-4 app-tutorial">
+                                    <div class="col-6 tutorial-image"><img class="tft"
+                                            src="https://rerollcdn.com/home/tft.svg" alt="tft"></div>
+                                    <h4>Start Your Match</h4>
+                                    <p>TFTactics automatically launches when your match starts</p>
+                                </div><a class="tutorial-btn"
+                                    href="https://download.overwolf.com/install/Download?&amp;PartnerId=3792&amp;ExtensionId=delfmdadipjjmpajblkalfkbebcbldbknecigjpc">
+                                    <div class="btn">Download the App</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-links"><a href="/privacy-policy">Privacy Policy</a><a
+                            href="/contact">Contact</a><a href="/partners">Partners Program</a>
+                        <div class="cookies nn-cmp-show" style="cursor: pointer;">Manage Cookie Settings</div>
+                        <div class="switch active">Set Skins<div class="switch-toggle"></div>
+                        </div>
+                        <div class="set-btn lang dropdown"><button type="button" aria-haspopup="true"
+                                aria-expanded="false" class="dropdown-toggle btn btn-secondary">EN</button>
+                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button
+                                    type="button" tabindex="0" role="menuitem" class=" active dropdown-item"
+                                    lang="en">EN</button><button type="button" tabindex="0" role="menuitem"
+                                    class="dropdown-item" lang="es">ES</button><button type="button" tabindex="0"
+                                    role="menuitem" class="dropdown-item" lang="pt">PT</button><button type="button"
+                                    tabindex="0" role="menuitem" class="dropdown-item" lang="de">DE</button><button
+                                    type="button" tabindex="0" role="menuitem" class="dropdown-item"
+                                    lang="ru">RU</button><button type="button" tabindex="0" role="menuitem"
+                                    class="dropdown-item" lang="ch">ZH</button><button type="button" tabindex="0"
+                                    role="menuitem" class="dropdown-item" lang="tr">TR</button><button type="button"
+                                    tabindex="0" role="menuitem" class="dropdown-item" lang="vi">VI</button><button
+                                    type="button" tabindex="0" role="menuitem" class="dropdown-item"
+                                    lang="fr">FR</button><button type="button" tabindex="0" role="menuitem"
+                                    class="dropdown-item" lang="pl">PL</button><button type="button" tabindex="0"
+                                    role="menuitem" class="dropdown-item" lang="it">IT</button></div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <p class="footer-about">TFTACTICS.GG isn’t endorsed by Riot Games and doesn’t reflect the views or
+                        opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
+                        League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+                        League of Legends © Riot Games, Inc.</p>
+                    <p class="footer-copyright">© TFTactics 2021</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
