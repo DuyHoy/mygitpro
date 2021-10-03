@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ExampleComp from "./ExComponent";
+import { Route } from "react-router";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
-      {/* <ExampleComp /> */}
+      {/* Route for example */}
+      {/* <Route path="/example" component={ExampleComp} /> */}
     </div>
   );
 }
