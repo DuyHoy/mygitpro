@@ -10,6 +10,8 @@ git push -u origin1 master
 
 git restore --staged
 
+git reset --hard HEAD // override and update source code
+
 # TFT-v1
 
 #react app tutor

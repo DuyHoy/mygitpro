@@ -1,13 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import ExampleComp from "./ExComponent";
-import Header from "./Components/Header";
-import { Route } from "react-router";
+import ChampionPage from "./Components/ChampionsPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,12 +17,14 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
 
       {/* Route for example */}
       {/* <Route path="/example" component={ExampleComp} /> */}
       {/* Route for/ */}
       {/* <Route path="/" component={Header} /> */}
+      {/* Route for Champion Page */}
+      <ChampionPage />
     </div>
   );
 }
