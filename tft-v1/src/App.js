@@ -1,6 +1,8 @@
 import "./App.css";
 import ChampionPage from "./Components/ChampionsPage";
-
+import TodoFeature from "./ExComponents/TodoFeature";
+import { Route } from "react-router-dom";
+import AlbumFeature from "./ExComponents/AlbumFeature";
 function App() {
   return (
     <div className="App">
@@ -20,11 +22,12 @@ function App() {
       </header> */}
 
       {/* Route for example */}
-      {/* <Route path="/example" component={ExampleComp} /> */}
+      <Route path="/example/todo" component={TodoFeature} />
+      <Route path="/example/album" component={AlbumFeature} />
       {/* Route for/ */}
       {/* <Route path="/" component={Header} /> */}
       {/* Route for Champion Page */}
-      <ChampionPage />
+      <Route path="/champions" component={ChampionPage} />
     </div>
   );
 }
