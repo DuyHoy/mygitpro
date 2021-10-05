@@ -25,3 +25,5 @@
 
 1. Phai install react-router-dom:
    terminal : npm install --save react-router-dom
+2. Vi project co dung file scss => cai them module sass
+   npm install sass
