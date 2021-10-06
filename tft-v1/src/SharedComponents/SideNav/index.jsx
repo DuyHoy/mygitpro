@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LinkComp from '../LinkComp';
 
 SideNav.propTypes = {
-   
+  item : PropTypes.object, 
 };
 
 
@@ -10,14 +11,12 @@ SideNav.defaultProps = {
 }
 
 function SideNav(props) {
-    const {listItem}= props;
+    const {item}= props;
     return (
         <React.Fragment>
-            {listItem.map(item=>(
-                    <a key={item.id} className="active" aria-current="page" href="/db/champions">
-                       <li className="sidenav-title">{item.name}</li>
-                   </a> 
-            ))}
+            {
+                 <LinkComp item={item}/> 
+           }
        
         </React.Fragment>
 

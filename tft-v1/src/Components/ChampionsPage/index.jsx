@@ -10,23 +10,23 @@ function ChampionPage(props) {
         {
             id :0,
             title: 'Champions',
-            link:"db/champions"
+            link:"/champions"
     },{
             id :1,
             title: 'Champions Stats',
-            link:"db/champions-stats"
+            link:"/champions-stats"
         },{
             id :2,
             title: 'Origin',
-            link:"db/origin"
+            link:"/origin"
         },{
-            id :2,
+            id :3,
             title: 'Classes',
-            link:"db/classes"
+            link:"/classes"
         },{
-            id :2,
+            id :4,
             title: 'Rolling',
-            link:"db/rolling"
+            link:"/rolling"
         }
 
 

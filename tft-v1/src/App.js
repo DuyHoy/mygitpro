@@ -27,7 +27,7 @@ function App() {
       {/* Route for/ */}
       {/* <Route path="/" component={Header} /> */}
       {/* Route for Champion Page */}
-      <Route path="/champions" component={ChampionPage} />
+      <Route path="/db/champions" component={ChampionPage} />
     </div>
   );
 }

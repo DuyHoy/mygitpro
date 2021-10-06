@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SideNav from '../SideNav';
 SideBar.propTypes = {
      listItem: PropTypes.array, 
 };
@@ -18,9 +19,7 @@ function SideBar(props) {
             <div className="divider"></div>
             <ul className="sidenav">
                 {listItem.map(item=>(
-                        <a key={item.id} className="active" aria-current="page" href={item.link}>
-                        <li className="sidenav-title">{item.title}</li>
-                    </a> 
+                 <SideNav item={item} /> 
                 ))}
             </ul>
         </div>
