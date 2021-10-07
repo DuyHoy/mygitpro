@@ -3,6 +3,7 @@ import ChampionPage from "./Components/ChampionsPage";
 import TodoFeature from "./ExComponents/TodoFeature";
 import { Route } from "react-router-dom";
 import AlbumFeature from "./ExComponents/AlbumFeature";
+import Header from "./Components/Header"
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,9 @@ function App() {
       {/* <Route path="/" component={Header} /> */}
       {/* Route for Champion Page */}
       <Route path="/db/champions" component={ChampionPage} />
+
+      <Route path="/header" component={Header} />
+
     </div>
   );
 }

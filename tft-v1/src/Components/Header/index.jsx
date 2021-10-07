@@ -9,10 +9,15 @@ Header.propTypes = {
 
 function Header(props) {
     return (
-        <div>
-            <ToolBar />
-            <MenuBar />
-        </div>
+        <nav className="nav toolbar">
+            <div className="nav-wrapper container">
+                <ToolBar />
+                <MenuBar />
+            </div>
+
+        </nav>
+
+
     );
 }
 
