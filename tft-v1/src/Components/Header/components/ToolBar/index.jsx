@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import LogoComp from './components/LogoComp';
 import DropDownComp from './components/DropDownComp';
 import SearchComp from './components/SearchComp';
+import DownloadComp from './components/DownloadComp';
 
 ToolBar.propTypes = {
 
@@ -14,6 +15,7 @@ function ToolBar(props) {
             <LogoComp />
             <DropDownComp />
             <SearchComp />
+            <DownloadComp />
         </React.Fragment>
 
     );
