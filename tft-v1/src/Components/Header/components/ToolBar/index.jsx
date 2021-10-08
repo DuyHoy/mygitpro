@@ -4,6 +4,7 @@ import LogoComp from './components/LogoComp';
 import DropDownComp from './components/DropDownComp';
 import SearchComp from './components/SearchComp';
 import DownloadComp from './components/DownloadComp';
+import MenuBar from '../MenuBar';
 
 ToolBar.propTypes = {
 
