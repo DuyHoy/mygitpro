@@ -4,6 +4,7 @@ import TodoFeature from "./ExComponents/TodoFeature";
 import { Route } from "react-router-dom";
 import AlbumFeature from "./ExComponents/AlbumFeature";
 import Header from "./Components/Header"
+import HeaderTest from "./Components/Header_test";
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
       <Route path="/db/champions" component={ChampionPage} />
 
       <Route path="/header" component={Header} />
+      <Route path="/headertest" component={HeaderTest} />
 
     </div>
   );
