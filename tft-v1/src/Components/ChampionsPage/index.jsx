@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SideBar from '../../SharedComponents/SideBar'
 import ChampionsList from './components/ChampionsList'
+import FilterFrame from './components/FilterFrame'
+import PageHeader from './components/ChampionsList/PageHeader'
 ChampionPage.propTypes = {
 };
 
@@ -33,9 +35,13 @@ function ChampionPage(props) {
     ];
     return (
         <section className="container">
-            <div className="row">
-                    <SideBar listItem={listItem}/>
-                    <ChampionsList/>            
+            <div className="row">    
+            <FilterFrame />
+                  <div className="col-12 col-lg-9 main">
+                      <PageHeader />
+                      <div className="divider"></div>
+                      <ul className="filter-list"></ul>
+                  </div>
             </div>
         </section>
     );
