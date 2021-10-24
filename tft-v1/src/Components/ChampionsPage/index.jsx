@@ -41,6 +41,7 @@ function ChampionPage(props) {
                       <PageHeader />
                       <div className="divider"></div>
                       <ul className="filter-list"></ul>
+                      <ChampionsList/>
                   </div>
             </div>
         </section>

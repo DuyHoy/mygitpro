@@ -7253,3 +7253,57 @@ a.characters-item:hover .character-name {
  color:hsla(0,0%,100%,.3);
  border-radius:3px
 }
+
+ /* css page champion */
+ .col-3{
+    width: 300px;
+    height: auto;
+}
+
+.col-12{
+    width: 850px;
+    height: auto;
+}
+
+.filter-title{
+    position: relative;
+    font-weight: 400;
+    padding: 10px 0;
+    transition: all .3s;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #88a0a7; 
+}
+
+.filter-item{
+  position: relative;
+  font-weight: 400; 
+  transition: all .3s;
+  margin-top: 15px;
+  cursor: pointer;
+  color: #88a0a7; 
+}
+
+.filter-item:hover,.filter-title:hover{
+  color: #fff;
+}
+
+.selected {
+  background: #d47559; 
+}
+
+.filter-icon{
+  width: 24px;
+  color: #88a0a7;
+  margin-right: 7px;
+}
+
+.block-left{
+    margin-right: 30px;
+}
+
+.block-right{
+    padding-left: 30px;
+    border-left: 1px solid #17313a;
+}
+
