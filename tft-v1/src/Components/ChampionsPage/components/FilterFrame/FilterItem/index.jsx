@@ -1,29 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 FilterItem.propTypes = {
-    
+
 };
 
-const styleTag=styled.i`
+const StyleTag = styled.i`
 float: right;
 font-size:small;
 `
 
 
-function FilterItem({item}) {
+function FilterItem({ item }) {
     console.log(item)
     return (
         <React.Fragment>
             {
-                item.map(item=>(
-                    <li class="filter-item">
-                        <img src={item.icon} alt={item.icon} class="filter-icon"/>
-                        {item.filterItem}<styleTag class="far fa-circle"/></li>
+                item.map(item => (
+                    <li key={item.id} className="filter-item">
+                        <img src={item.icon} alt={item.icon} className="filter-icon" />
+                        {item.filterItem}<StyleTag className="far fa-circle" /></li>
                 ))
             }
-       </React.Fragment>
+        </React.Fragment>
     );
 }
 
