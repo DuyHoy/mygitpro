@@ -1,33 +1,37 @@
-import React from 'react';
+import React,{ useState }  from 'react';
 import PropTypes from 'prop-types';
 import FilterItem from '../FilterItem'
 import styled from 'styled-components'
+import {IoIosArrowDown} from 'react-icons/io' 
 
 
-FilterTitle.propTypes = {
-    filter: PropTypes.object,
+ FilterTitle.propTypes = {
+    filter:PropTypes.object,
 };
 
-const StyleTag = styled.i`
-    font-size: 20px;
-    color: white;
-    float: right;
-    `
-
-
-
-function FilterTitle({ filter }) {
+// const styleTag=styled.i`
+//     font-size: 20px;
+//     color: white;
+//     float: right;
+//     `
+    const styleTag = {
+        float: 'right',
+        fontsize:'small'
+      };
+     
+     
+function FilterTitle({filter}) { 
+    const [classActive, SetState] = useState(false);
     return (
-        <React.Fragment>
-
-            <li className="filter-title" >{filter.filterTitle}<StyleTag className="fas fa-chevron-down" id="arrow-cost" /></li>
-            <div className="sub-filter" id="sub-cost">
+        <React.Fragment> 
+ 
+        <li class="filter-title" onClick={() => SetState(!classActive)}>{filter.filterTitle}<IoIosArrowDown class={classActive?`arrow-up`:""} style={styleTag}/></li>
+            <div class={`sub-filter${classActive?"open":""}`} id="sub-cost">
                 <ul>
-                    <FilterItem item={filter.subFilter} />
+                <FilterItem item={filter.subFilter}/> 
                 </ul>
             </div>
-        </React.Fragment>
-
+        </React.Fragment> 
     );
 }
 

@@ -7307,3 +7307,51 @@ a.characters-item:hover .character-name {
     border-left: 1px solid #17313a;
 }
 
+.sub-filter{
+    display: none;
+}
+
+.open{
+    display: block;
+}
+
+.arrow-up{
+    transform: rotate(180deg);
+}
+
+.nav-link{
+    align-items: center;
+    position: relative;
+    width:auto;
+    height: 100%;
+    color: #88a0a7;
+    font: 15px;
+    padding: 0 10px;
+    transform: all .3s;
+    background: transparent;
+}
+
+.nav-links-sub{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    /* display: none; */
+    position: absolute;
+    background-color: #102531;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: #88a0a7;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
