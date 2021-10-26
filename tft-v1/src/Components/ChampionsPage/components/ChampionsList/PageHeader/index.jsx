@@ -10,8 +10,14 @@ margin-left: 20px,
     `
 
 
-function PageHeader(props) {
+function PageHeader({ filter, handleFilterChanges }) {
+    function handleFilterChange(event) {
+        // var filterName = this.dropdown.value;
+        // this.props.onSelectLanguage(lang);
+        handleFilterChanges(event.target.value);
+    }
     return (
+
         <div className="page-header">
             <h1>TFT Champions List
                 <StyleTag className="set-btn dropdown">
@@ -27,7 +33,7 @@ function PageHeader(props) {
             </h1 >
             <div className="searchbar">
                 <img className="searchbar-icon" src="https://rerollcdn.com/search-icon.svg" alt="search icon" />
-                <input className="searchbar-input" type="text" placeholder="Search by name, origin, or className..." defaultValue="" />
+                <input className="searchbar-input" type="text" placeholder="Search by name, origin, or className..." value={filter} onChange={handleFilterChange} />
                 <img className="searchbar-close" src="https://rerollcdn.com/close-icon.svg" alt="close icon" />
             </div>
 
