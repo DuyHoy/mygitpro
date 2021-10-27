@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 // import {CharacterItem} from './data'
 
 CharacterItem.propTypes = {
-    Item: PropTypes.object,
+    champ: PropTypes.object,
 };
 
-function CharacterItem({ Item }) {
+function CharacterItem({ champ }) {
     return (
         <div>
             <a href="#" className="characters-item">
                 <div className="character-wrapper">
-                    <img src={Item.img} alt="#" className="character-icon" />
+                    <img src={champ.img} alt="#" className="character-icon" />
                 </div>
-                <p className="character-name">{Item.name}</p>
+                <p className="character-name">{champ.name}</p>
             </a>
         </div>
     );

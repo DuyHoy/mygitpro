@@ -4,7 +4,8 @@ import TodoFeature from "./ExComponents/TodoFeature";
 import { Route } from "react-router-dom";
 import AlbumFeature from "./ExComponents/AlbumFeature";
 import Header from "./Components/Header"
-import HeaderTest from "./Components/Header_test";
+import HeaderV2 from "./Components/HeaderV2";
+import TeamCompPage from "./Components/TeamcompsPage";
 function App() {
   return (
     <div className="App">
@@ -29,10 +30,11 @@ function App() {
       {/* Route for/ */}
       {/* <Route path="/" component={Header} /> */}
       {/* Route for Champion Page */}
-      <Route path="/db/champions" component={ChampionPage} />
+      <Route path="/champions" component={ChampionPage} />
 
       <Route path="/header" component={Header} />
-      <Route path="/headertest" component={HeaderTest} />
+      <Route path="/headerV2" component={HeaderV2} />
+      <Route path="/teamcomppage" component={TeamCompPage}/>
 
     </div>
   );

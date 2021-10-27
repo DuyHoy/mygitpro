@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types'
 import {Server,Version,links} from './data'
 
-function HeaderTest(props) {
+function HeaderV2(props) {
 
     // show item server
     const [showItem,setShowItem]=useState(false);
@@ -78,9 +78,9 @@ function HeaderTest(props) {
     )
 }
 
-HeaderTest.propTypes = {
+HeaderV2.propTypes = {
 
 }
 
-export default HeaderTest
+export default HeaderV2
 

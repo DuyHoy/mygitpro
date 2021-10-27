@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FilterTitle from './FilterTitle'
-import {Filter} from './data'
+import FilterTitle from './FilterTitle' 
+
 
 FilterFrame.propTypes = {
     
 };
 
-function FilterFrame(props) {
+function FilterFrame({filterdata,champion,filterchampion}) {
      
     return (
         <React.Fragment>
@@ -15,8 +15,8 @@ function FilterFrame(props) {
                <div class="filters-header"><h2>Filters</h2><div class="btn">Reset</div></div>
                <div class="divider"></div>
                {
-                   Filter.map(filter=>(
-                    <FilterTitle filter={filter}/>
+                   filterdata.map(filter=>(
+                    <FilterTitle filter={filter} champion={champion} filterchampion={filterchampion}/>
                    ))
                } 
                </div>

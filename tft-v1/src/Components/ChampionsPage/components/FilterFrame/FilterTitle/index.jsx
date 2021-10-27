@@ -20,7 +20,7 @@ import {IoIosArrowDown} from 'react-icons/io'
       };
      
      
-function FilterTitle({filter}) { 
+function FilterTitle({filter,champion,filterchampion}) { 
     const [classActive, SetState] = useState(false);
     return (
         <React.Fragment> 
@@ -28,7 +28,7 @@ function FilterTitle({filter}) {
         <li class="filter-title" onClick={() => SetState(!classActive)}>{filter.filterTitle}<IoIosArrowDown class={classActive?`arrow-up`:""} style={styleTag}/></li>
             <div class={`sub-filter${classActive?"open":""}`} id="sub-cost">
                 <ul>
-                <FilterItem item={filter.subFilter}/> 
+                <FilterItem item={filter.subFilter} champion={champion} filterchampion={filterchampion}/> 
                 </ul>
             </div>
         </React.Fragment> 
