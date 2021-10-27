@@ -34,7 +34,7 @@ function App() {
 
       <Route path="/header" component={Header} />
       <Route path="/headerV2" component={HeaderV2} />
-      <Route path="/teamcomppage" component={TeamCompPage}/>
+      <Route path="/tierlist/teamcomps" component={TeamCompPage} />
 
     </div>
   );
