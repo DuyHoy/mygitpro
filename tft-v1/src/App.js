@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import AlbumFeature from "./ExComponents/AlbumFeature";
 import Header from "./Components/Header"
 import HeaderV2 from "./Components/HeaderV2";
-import TeamCompPage from "./Components/TeamcompsPage";
+import TeamCompsPage from "./Components/TeamCompsPage";
 function App() {
   return (
     <div className="App">
@@ -34,7 +34,7 @@ function App() {
 
       <Route path="/header" component={Header} />
       <Route path="/headerV2" component={HeaderV2} />
-      <Route path="/tierlist/teamcomps" component={TeamCompPage} />
+      <Route path="/tierlist/teamcomps" component={TeamCompsPage} />
 
     </div>
   );
