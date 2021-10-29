@@ -28,7 +28,7 @@ function FilterTitle({filter,champion,filterchampion}) {
         <li class="filter-title" onClick={() => SetState(!classActive)}>{filter.filterTitle}<IoIosArrowDown class={classActive?`arrow-up`:""} style={styleTag}/></li>
             <div class={`sub-filter${classActive?"open":""}`} id="sub-cost">
                 <ul>
-                <FilterItem item={filter.subFilter} champion={champion} filterchampion={filterchampion}/> 
+                <FilterItem item={filter.subFilter} champion={champion} filterchampion={filterchampion} categoryFilter={filter.filterTitle}/> 
                 </ul>
             </div>
         </React.Fragment> 

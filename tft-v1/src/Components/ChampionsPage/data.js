@@ -43,6 +43,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Aatrox',
         cost: 1,
+        origin:'Abomination',
+        class:'Assasin', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Aatrox.png'
     },
     {
@@ -50,6 +52,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Velkoz',
         cost: 1,
+        origin:'Dawnbringer',
+        class:'Brawler', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Velkoz.png'
     },
     {
@@ -57,6 +61,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Gwen',
         cost: 2,
+        origin:'Draconic',
+        class:'Cannoneer', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Gwen.png'
     },
     {
@@ -64,6 +70,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Kennen',
         cost: 2,
+        origin:'Forgotten',
+        class:'Cavalier', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Kennen.png'
     },
     {
@@ -71,6 +79,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Aatrox',
         cost: 3,
+        origin:'Abomination',
+        class:'Assasin', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Aatrox.png'
     },
     {
@@ -78,6 +88,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Velkoz',
         cost: 3,
+        origin:'Hellion',
+        class:'Cruel', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Velkoz.png'
     },
     {
@@ -85,6 +97,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Aatrox',
         cost: 4,
+        origin:'Hellion',
+        class:'Cruel', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Gwen.png'
     },
     {
@@ -92,6 +106,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Kennen',
         cost: 4,
+        origin:'Abomination',
+        class:'Assasin', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Kennen.png'
     },
     {
@@ -99,6 +115,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Nautilus',
         cost: 5,
+        origin:'Abomination',
+        class:'Assasin', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Nautilus.png'
     },
     {
@@ -106,6 +124,8 @@ export const ChampList = [
         url: '/CharacterItem',
         name: 'Draven',
         cost: 5,
+        origin:'Abomination',
+        class:'Assasin', 
         img: 'https://rerollcdn.com/characters/Skin/5.5/Draven.png'
     },
 ]

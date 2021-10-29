@@ -3,11 +3,11 @@ import HeaderV2 from '../HeaderV2'
 import FilterFrame from '../ChampionsPage/components/FilterFrame'
 
 
-TeamCompPage.propTypes = {
+TeamCompsPage.propTypes = {
 
 };
 
-function TeamCompPage(props) {
+function TeamCompsPage(props) {
     const divStyle = {
         'margin-left': '20px'
     }
@@ -1354,4 +1354,4 @@ function TeamCompPage(props) {
     );
 }
 
-export default TeamCompPage;
+export default TeamCompsPage;

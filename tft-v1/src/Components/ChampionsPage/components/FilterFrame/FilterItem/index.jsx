@@ -17,15 +17,18 @@ const styleTag = {
     fontsize:'small'
   };
 
-function FilterItem({item,champion,filterchampion}) { 
-    return (
+function FilterItem({item,champion,filterchampion,categoryFilter}) { 
+    //console.log(categoryFilter);
+    return ( 
         <React.Fragment>
-            {
+            { 
                 item.map((item,index)=>(
                     <li class="filter-item" key={index}>
                         <img src={item.icon} alt={item.icon} class="filter-icon"/>
                         {item.filterItem} 
-                        <BsCircle style={styleTag} onClick={()=>filterchampion(item.id)}/>
+                        <BsCircle style={styleTag} onClick={ 
+                            categoryFilter=='Cost'?()=>filterchampion(item.id,categoryFilter):()=>filterchampion(item.filterItem,categoryFilter)  
+                        }/>
                     </li>
                 ))
             }

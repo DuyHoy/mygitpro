@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import AlbumFeature from "./ExComponents/AlbumFeature";
 import Header from "./Components/Header"
 import HeaderV2 from "./Components/HeaderV2";
-import TeamCompsPage from "./Components/TeamCompsPage";
+import TeamCompsPage from './Components/TeamcompsPage'
 function App() {
   return (
     <div className="App">

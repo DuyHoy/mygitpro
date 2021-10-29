@@ -39,16 +39,73 @@ function ChampionPage(props) {
     const [champList,setChampList]=useState(ChampList);
     // const [champion,setChampion]=useState(allChampion);
 
-   const filterChampion=(cost)=>{
-       console.log(cost);
-        if(cost==''){
-            setChampList(Filter);
-            return;
+//    const listSearch=(cost,cateChamp)=>{
+//        let myArray=[];
+//         myArray.push({item:cost,category:cateChamp});
+//         console.log(myArray);
+//    }
+ 
+let myArray=[]; 
+// let obj={'item':1,'category':'Aatrox'};
+
+function containsObject(obj, myArray) {
+    var i; 
+    for (i = 0; i < myArray.length; i++) {  
+        if (myArray[i].item == obj.item) { 
+            return true;
         }
-        const newFilter=ChampList.filter((item)=>item.cost===cost);
-        console.log(newFilter);
-        setChampList(newFilter)
     }
+
+    return false;
+}
+   const filterChampion=(cost,cateChamp)=>{
+        const obj={'item':cost,'category':cateChamp}; 
+         if(!containsObject(obj,myArray)){
+            myArray.push(obj);
+        }
+       
+        console.log(myArray)
+          
+        // if(cost==''){
+        //     setChampList(Filter);
+        //     return;
+        // }
+
+        // if(cateChamp=='Cost'){
+        //     const filterCost=ChampList.filter((item)=>item.cost===cost);
+        //     console.log(filterCost);
+        //     setChampList(filterCost)
+        // }
+            
+        // if(cateChamp=='Origin'){
+        //     const filterOrigin=ChampList.filter((item)=>item.origin===cost);
+        //     console.log(filterOrigin);
+        //     setChampList(filterOrigin)
+        // }
+            
+        // if(cateChamp=='Class'){
+        //     const filterClass=ChampList.filter((item)=>item.class===cost);
+        //     console.log(filterClass);
+        //     setChampList(filterClass)
+        // }
+
+        console.log(myArray)
+        if(!myArray.length==0){
+            const myArrayFilter=champList.filter((el)=>{
+                return myArray.some((f)=>{
+                    return f.category=='Cost' && el.cost==f.item || f.category=='Origin' && el.origin==f.item || f.category=='Class' && el.class==f.item
+                })
+            })
+            console.log(myArrayFilter);
+             setChampList(myArrayFilter);
+        }
+
+        
+
+    }
+
+    
+
 
     return (
         <React.Fragment>
