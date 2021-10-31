@@ -1,51 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CharactersItem from '../../../../../../SharedComponents/CharactersItem';
+import TraitItem from '../../../../../../SharedComponents/TraitItem';
+import CarouselItem from '../../../../../../SharedComponents/CarouselItem';
 
 TeamExpand.propTypes = {
 
 };
 
-function TeamExpand({ divStyle2 }) {
+function TeamExpand({ divStyle2, characterExpandList, traitList, carouselList }) {
     return (
         <div className="team-expanded">
             <div className="team-expanded-group mid">
                 <div className="team-expanded-list">
-                    <a className="characters-item c1" href="/champions/kalista"
-                    ><div className="character-wrapper">
-                            <img
-                                className="character-icon"
-                                src="https://rerollcdn.com/characters/Skin/5.5/Kalista.png"
-                                alt="Kalista"
-                            /></div></a
-                    ><a className="characters-item c2" href="/champions/brand"
-                    ><div className="character-wrapper">
-                            <img
-                                className="character-icon"
-                                src="https://rerollcdn.com/characters/Skin/5.5/Brand.png"
-                                alt="Brand"
-                            /></div></a
-                    ><a className="characters-item c2" href="/champions/sett"
-                    ><div className="character-wrapper">
-                            <img
-                                className="character-icon"
-                                src="https://rerollcdn.com/characters/Skin/5.5/Sett.png"
-                                alt="Sett"
-                            /></div></a
-                    ><a className="characters-item c3" href="/champions/nunu"
-                    ><div className="character-wrapper">
-                            <img
-                                className="character-icon"
-                                src="https://rerollcdn.com/characters/Skin/5.5/Nunu.png"
-                                alt="Nunu"
-                            /></div></a
-                    ><a className="characters-item c3" href="/champions/zyra"
-                    ><div className="character-wrapper">
-                            <img
-                                className="character-icon"
-                                src="https://rerollcdn.com/characters/Skin/5.5/Zyra.png"
-                                alt="Zyra"
-                            /></div
-                        ></a>
+                    {characterExpandList.map(characterExpandItem => (
+                        <CharactersItem characterItem={characterExpandItem} />
+                    ))}
+
                 </div>
                 <div className="team-expanded-title">Early Comp</div>
             </div>
@@ -53,137 +24,11 @@ function TeamExpand({ divStyle2 }) {
                 <div className="builder-bonus">
                     <div className="builder-bonus-group">
                         <div className="builder-bonus-list team-expanded-list">
-                            <div className="builder-bonus-item active gold">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Caretaker"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="type-icon"
-                                        src="https://rerollcdn.com/icons/caretaker.png"
-                                        alt="Caretaker"
-                                    />
-                                    <div className="builder-bonus-counter"><span>1</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active gold">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Inanimate"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="origin-icon"
-                                        src="https://rerollcdn.com/icons/inanimate.png"
-                                        alt="Inanimate"
-                                    />
-                                    <div className="builder-bonus-counter"><span>1</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active silver">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Abomination"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="origin-icon"
-                                        src="https://rerollcdn.com/icons/abomination.png"
-                                        alt="Abomination"
-                                    />
-                                    <div className="builder-bonus-counter"><span>4</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active silver">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Revenant"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="origin-icon"
-                                        src="https://rerollcdn.com/icons/revenant.png"
-                                        alt="Revenant"
-                                    />
-                                    <div className="builder-bonus-counter"><span>3</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active bronze">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Mystic"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="type-icon"
-                                        src="https://rerollcdn.com/icons/mystic.png"
-                                        alt="Mystic"
-                                    />
-                                    <div className="builder-bonus-counter"><span>2</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active bronze">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Brawler"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="type-icon"
-                                        src="https://rerollcdn.com/icons/brawler.png"
-                                        alt="Brawler"
-                                    />
-                                    <div className="builder-bonus-counter"><span>2</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                </div>
-                            </div>
-                            <div className="builder-bonus-item active bronze">
-                                <div
-                                    className="builder-bonus-icon"
-                                    search="Renewer"
-                                    style={divStyle2}
-                                >
-                                    <img
-                                        className="type-icon"
-                                        src="https://rerollcdn.com/icons/renewer.png"
-                                        alt="Renewer"
-                                    />
-                                    <div className="builder-bonus-counter"><span>2</span></div>
-                                </div>
-                                <div className="builder-bonus-count">
-                                    <div className="builder-bonus-count-bar active"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                    <div className="builder-bonus-count-bar"></div>
-                                </div>
-                            </div>
+
+                            {traitList.map(traitItem => (
+                                <TraitItem traitItem={traitItem} />
+                            ))}
+
                         </div>
                     </div>
                 </div>
@@ -191,71 +36,11 @@ function TeamExpand({ divStyle2 }) {
             </div>
             <div className="team-expanded-group items">
                 <div className="team-expanded-list">
-                    <div className="carousel-items">
-                        <div className="carousel-component">
-                            <a className="characters-item" href="/item-builder"
-                            ><div className="character-wrapper">
-                                    <img
-                                        className="character-icon"
-                                        src="https://rerollcdn.com/items/TearoftheGoddess.png"
-                                        alt="Tear of the Goddess"
-                                    /></div
-                                ></a>
-                            <div className="carousel-full">
-                                <a className="characters-item" href="/item-builder"
-                                ><div className="character-wrapper">
-                                        <img
-                                            className="character-icon"
-                                            src="https://rerollcdn.com/items/ArchangelsStaff.png"
-                                            alt="Archangel's Staff"
-                                        /></div
-                                    ></a>
-                            </div>
-                        </div>
-                        <i className="arrow down"></i>
-                        <div className="carousel-component">
-                            <a className="characters-item" href="/item-builder"
-                            ><div className="character-wrapper">
-                                    <img
-                                        className="character-icon"
-                                        src="https://rerollcdn.com/items/NeedlesslyLargeRod.png"
-                                        alt="Needlessly Large Rod"
-                                    /></div
-                                ></a>
-                            <div className="carousel-full">
-                                <a className="characters-item" href="/item-builder"
-                                ><div className="character-wrapper">
-                                        <img
-                                            className="character-icon"
-                                            src="https://rerollcdn.com/items/ArchangelsStaff.png"
-                                            alt="Archangel's Staff"
-                                        /></div
-                                    ></a>
-                            </div>
-                        </div>
-                        <i className="arrow down"></i>
-                        <div className="carousel-component">
-                            <a className="characters-item" href="/item-builder"
-                            ><div className="character-wrapper">
-                                    <img
-                                        className="character-icon"
-                                        src="https://rerollcdn.com/items/GiantsBelt.png"
-                                        alt="Giant's Belt"
-                                    /></div
-                                ></a>
-                            <div className="carousel-full">
-                                <a className="characters-item" href="/item-builder"
-                                ><div className="character-wrapper">
-                                        <img
-                                            className="character-icon"
-                                            src="https://rerollcdn.com/items/SunfireCape.png"
-                                            alt="Sunfire Cape"
-                                        /></div
-                                    ></a>
-                            </div>
-                        </div>
-                        <i className="arrow down"></i>
-                    </div>
+
+                    {carouselList.map(carouselItem => (
+                        <CarouselItem carouselItem={carouselItem} />
+
+                    ))}
                 </div>
                 <div className="team-expanded-title">Carousel</div>
             </div>

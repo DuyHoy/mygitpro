@@ -9,7 +9,7 @@ TeamCompsPage.propTypes = {
 
 function TeamCompsPage(props) {
     const divStyle = {
-        'margin-left': '20px'
+        'marginLeft': '20px'
     }
     const divStyle2 = {
         'cursor': 'pointer'
@@ -66,8 +66,8 @@ function TeamCompsPage(props) {
                             <h1>TFT Meta Team Comps Tier List
                                 <div style={divStyle} className="set-btn dropdown">
                                     <button type="button" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle btn btn-secondary">Set 5.5</button>
-                                    <div tabindex="-1" role="menu" aria-hidden="true" className="dropdown-menu">
-                                        <button type="button" set="5.5" tabindex="0" role="menuitem" className=" active dropdown-item">Set 5.5</button><button type="button" set="6" tabindex="0" role="menuitem" className="dropdown-item">Set 6</button>
+                                    <div tabIndex="-1" role="menu" aria-hidden="true" className="dropdown-menu">
+                                        <button type="button" set="5.5" tabIndex="0" role="menuitem" className=" active dropdown-item">Set 5.5</button><button type="button" set="6" tabIndex="0" role="menuitem" className="dropdown-item">Set 6</button>
                                     </div>
                                 </div>
                             </h1>
