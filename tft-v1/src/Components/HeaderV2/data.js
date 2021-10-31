@@ -1,55 +1,53 @@
-import React from 'react'; 
 
-
-export const links=[
-    {
-        id:1,
-        url:'/teamcomps',
-        text:'Team Comps',
-    },
-    {
-        id:2,
-        url:'/metareport',
-        text:'Meta Report',
-    },
-    {
-        id:3,
-        url:'/champions',
-        text:'Champions',
-    },
-    {
-        id:4,
-        url:'/tierlists',
-        text:'Tier Lists',
-    },
-    {
-        id:5,
-        url:'/itembuilder',
-        text:'Item Builder',
-    },
-    {
-        id:6,
-        url:'/teambuilder',
-        text:'Team Builder',
-    },
-    {
-        id:7,
-        url:'/database',
-        text:'Database',
-    },
-    {
-        id:8,
-        url:'/patchnotes',
-        text:'Patch Notes',
-    } 
+export const links = [
+  {
+    id: 1,
+    url: '/teamcomps',
+    text: 'Team Comps',
+  },
+  {
+    id: 2,
+    url: '/metareport',
+    text: 'Meta Report',
+  },
+  {
+    id: 3,
+    url: '/champions',
+    text: 'Champions',
+  },
+  {
+    id: 4,
+    url: '/tierlists',
+    text: 'Tier Lists',
+  },
+  {
+    id: 5,
+    url: '/itembuilder',
+    text: 'Item Builder',
+  },
+  {
+    id: 6,
+    url: '/teambuilder',
+    text: 'Team Builder',
+  },
+  {
+    id: 7,
+    url: '/database',
+    text: 'Database',
+  },
+  {
+    id: 8,
+    url: '/patchnotes',
+    text: 'Patch Notes',
+  }
 ]
 
-export const Version =[
-    {
-        id:1,
-        url:'/',
-        text:'Set 5.5',
-    }
+export const Version = [
+  {
+    id: 1,
+    url: '/',
+    text: 'Set 5.5',
+  }
 ]
 
 export const Server = [
@@ -110,4 +108,4 @@ export const Server = [
   },
 ];
 
- 
+

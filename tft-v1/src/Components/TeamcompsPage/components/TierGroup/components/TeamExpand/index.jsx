@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CharactersItem from '../../../../../../SharedComponents/CharactersItem';
 import TraitItem from '../../../../../../SharedComponents/TraitItem';
 import CarouselItem from '../../../../../../SharedComponents/CarouselItem';
@@ -36,11 +35,14 @@ function TeamExpand({ divStyle2, characterExpandList, traitList, carouselList })
             </div>
             <div className="team-expanded-group items">
                 <div className="team-expanded-list">
-
-                    {carouselList.map(carouselItem => (
-                        <CarouselItem carouselItem={carouselItem} />
-
-                    ))}
+                    <div class="carousel-items">
+                        {carouselList.map(carouselItem => (
+                            <React.Fragment>
+                                <CarouselItem carouselItem={carouselItem} />
+                                <i className="arrow down"></i>
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </div>
                 <div className="team-expanded-title">Carousel</div>
             </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 PageHeader.propTypes = {
@@ -10,9 +9,9 @@ margin-left: 20px,
     `
 
 
-function PageHeader({filter,handleFilterChanges}) {
+function PageHeader({ filter, handleFilterChanges }) {
 
-    function handleFilterChange(event){
+    function handleFilterChange(event) {
         handleFilterChanges(event.target.value);
     }
 
@@ -34,7 +33,7 @@ function PageHeader({filter,handleFilterChanges}) {
                 <img className="searchbar-icon" src="https://rerollcdn.com/search-icon.svg" alt="search icon" />
                 <input className="searchbar-input" type="text" placeholder="Search by name, origin, or className..."
                     value={filter} onChange={handleFilterChange}
-                defaultValue="" />
+                    defaultValue="" />
                 <img className="searchbar-close" src="https://rerollcdn.com/close-icon.svg" alt="close icon" />
             </div>
 

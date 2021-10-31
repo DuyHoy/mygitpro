@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TeamName from './components/TeamName';
 import TeamCharacter from './components/TeamCharacter';
 import TeamMore from './components/TeamMore';

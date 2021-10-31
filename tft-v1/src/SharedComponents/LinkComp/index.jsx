@@ -1,20 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 
 LinkComp.propTypes = {
-    
+
 };
 
 function LinkComp(props) {
-    const parent=useRouteMatch();
+    const parent = useRouteMatch();
     console.log(parent.path);
-    const {item}= props;
+    const { item } = props;
     return (
         <React.Fragment>
-             <NavLink  activeClassName="active" aria-current="page" to={parent.path  + item.link}>
-                        <li className="sidenav-title">{item.title}</li>
-            </NavLink> 
+            <NavLink activeClassName="active" aria-current="page" to={parent.path + item.link}>
+                <li className="sidenav-title">{item.title}</li>
+            </NavLink>
         </React.Fragment>
     );
 }

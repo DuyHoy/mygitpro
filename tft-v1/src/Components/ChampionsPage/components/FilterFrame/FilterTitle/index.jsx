@@ -1,12 +1,11 @@
-import React,{ useState }  from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import FilterItem from '../FilterItem'
-import styled from 'styled-components'
-import {IoIosArrowDown} from 'react-icons/io' 
+import { IoIosArrowDown } from 'react-icons/io'
 
 
- FilterTitle.propTypes = {
-    filter:PropTypes.object,
+FilterTitle.propTypes = {
+    filter: PropTypes.object,
 };
 
 // const styleTag=styled.i`
@@ -14,24 +13,24 @@ import {IoIosArrowDown} from 'react-icons/io'
 //     color: white;
 //     float: right;
 //     `
-    const styleTag = {
-        float: 'right',
-        fontsize:'small'
-      };
-     
-     
-function FilterTitle({filter,champion,filterchampion}) { 
+const styleTag = {
+    float: 'right',
+    fontsize: 'small'
+};
+
+
+function FilterTitle({ filter, champion, filterchampion }) {
     const [classActive, SetState] = useState(false);
     return (
-        <React.Fragment> 
- 
-        <li class="filter-title" onClick={() => SetState(!classActive)}>{filter.filterTitle}<IoIosArrowDown class={classActive?`arrow-up`:""} style={styleTag}/></li>
-            <div class={`sub-filter${classActive?"open":""}`} id="sub-cost">
+        <React.Fragment>
+
+            <li class="filter-title" onClick={() => SetState(!classActive)}>{filter.filterTitle}<IoIosArrowDown class={classActive ? `arrow-up` : ""} style={styleTag} /></li>
+            <div class={`sub-filter${classActive ? "open" : ""}`} id="sub-cost">
                 <ul>
-                <FilterItem item={filter.subFilter} champion={champion} filterchampion={filterchampion}/> 
+                    <FilterItem item={filter.subFilter} champion={champion} filterchampion={filterchampion} />
                 </ul>
             </div>
-        </React.Fragment> 
+        </React.Fragment>
     );
 }
 

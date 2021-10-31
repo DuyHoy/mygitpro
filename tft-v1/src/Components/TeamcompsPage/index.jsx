@@ -14,22 +14,6 @@ function TeamCompsPage(props) {
     const divStyle2 = {
         'cursor': 'pointer'
     }
-    const Filter = [
-        {
-            id: 1,
-            filterTitle: 'Set 5.5',
-            subFilter: [
-
-            ]
-        },
-        {
-            id: 2,
-            filterTitle: 'Set 6',
-            subFilter: [
-
-            ]
-        }
-    ]
     return (
         <React.Fragment>
             <HeaderV2 />

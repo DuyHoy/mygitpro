@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TeamComp from './components/TeamComp';
 import MetaReport from './components/MetaReport';
 import Champions from './components/Champions';

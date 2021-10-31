@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CharactersItem from '../../../../../../SharedComponents/CharactersItem';
 
 TeamCharacter.propTypes = {
