@@ -28,3 +28,6 @@
 2. Vi project co dung file scss => cai them module sass
    npm install sass
 3. npm install react-icons --save
+4. API championList and builderItemList
+   -https://jsonserver-demo.herokuapp.com/api/championList
+   -https://jsonserver-demo.herokuapp.com/api/builderItemList
