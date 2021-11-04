@@ -10,6 +10,79 @@ TeamExpand.propTypes = {
 };
 
 function TeamExpand({ divStyle2, characterExpandList, traitList, carouselList }) {
+    var N = 10;
+    const BlankItem = {
+        position: -1,
+        cost: 0,
+        img: "",
+        name: "",
+        childCharacterList: [],
+    }
+    const PositionList = [
+        {
+            position: 4,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Volibear.png",
+            name: "Volibear",
+            childCharacterList: [],
+        },
+        {
+            position: 5,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Nunu.png",
+            name: "Nunu",
+            childCharacterList: [],
+        },
+        {
+            position: 11,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Fiddlesticks.png",
+            name: "Fiddlesticks",
+            childCharacterList: [],
+        },
+        {
+            position: 12,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Ivern.png",
+            name: "Ivern",
+            childCharacterList: [],
+        },
+        {
+            position: 19,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Brand.png",
+            name: "Brand",
+            childCharacterList: [],
+        },
+        {
+            position: 20,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Gwen.png",
+            name: "Gwen",
+            childCharacterList: [],
+        },
+        {
+            position: 26,
+            cost: 1,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Kalista.png",
+            name: "Kalista",
+            childCharacterList: [],
+        },
+        {
+            position: 27,
+            cost: 2,
+            img: "https://rerollcdn.com/characters/Skin/5.5/Heimerdinger.png",
+            name: "Heimerdinger",
+            childCharacterList: [],
+        }
+
+    ]
+    // var arr = Array.apply(null, { length: 28 }).map((i, index) => (PositionList[index] != undefined) ? PositionList[index] : [])
+    var arr = Array.apply(null, { length: 28 }).map((i, index) => { return BlankItem })
+    PositionList.forEach(positionItem => {
+        arr[positionItem.position] = positionItem
+    });
+    console.log(arr);
     return (
         <div className="team-expanded">
             <div className="team-expanded-group mid">
@@ -90,7 +163,7 @@ function TeamExpand({ divStyle2, characterExpandList, traitList, carouselList })
                 <div className="team-expanded-title">Options</div>
             </div>
             <div className="team-expanded-group positioning">
-                <TeamPosition />
+                <TeamPosition PositionList={arr} />
             </div>
         </div>
     );

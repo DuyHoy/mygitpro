@@ -1,15 +1,29 @@
 import React from 'react';
+import PositionItem from './components/PositionItem';
 
 TeamPosition.propTypes = {
 
 };
 
-function TeamPosition(props) {
+function TeamPosition({ PositionList }) {
+
     return (
         <React.Fragment>
             <div className="team-positioning">
                 <ul id="hexGrid" className="four-row">
-                    <li className="hex">
+
+                    {
+
+                        PositionList.map(function (element, index) {
+                            { console.log('object', element.position) }
+                            return (< PositionItem PositionItem={element} />)
+                        })
+
+
+                    }
+
+
+                    {/* <li className="hex">
                         <div className="hexIn"><div className="hexLink"></div></div>
                     </li>
                     <li className="hex">
@@ -180,7 +194,7 @@ function TeamPosition(props) {
                                     ></a>
                             </div>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="team-expanded-title">Positioning</div>

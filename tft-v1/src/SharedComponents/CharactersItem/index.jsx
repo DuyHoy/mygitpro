@@ -5,7 +5,10 @@ CharactersItem.propTypes = {
 
 };
 
+
+
 function CharactersItem({ characterItem }) {
+
     return (
         <a className={`characters-item ` + (characterItem.cost ? 'c' + characterItem.cost : "")} href={'/champions/' + characterItem.name.toLowerCase()} >
             <div className="character-wrapper">
@@ -29,6 +32,7 @@ function CharactersItem({ characterItem }) {
 
         </a >
     );
+
 }
 
 export default CharactersItem;
